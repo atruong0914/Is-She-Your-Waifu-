@@ -18,10 +18,7 @@
 * n/a
 ***
 # Future Updates
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [] Completed Update
-- [] ~~Strikethrough~~ Items Also
+* n/a
 ***
 # ***Credits***
 * n/a
