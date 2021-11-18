@@ -10,6 +10,7 @@
 * HTML
 * CSS
 * JavaScript
+* [Trello](https://trello.com/invite/b/XGtwx60e/c667a15fad1e8aa76c437e7d084fbc29/is-she-your-waifu)
 ***
 # ***Getting Started***
 ## Answer questions given to you wisely by the waifu!
