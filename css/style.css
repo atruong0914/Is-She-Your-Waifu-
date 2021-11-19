@@ -1,0 +1,50 @@
+body {
+    background-image: url('/img/home.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: auto;
+}
+
+h1, h2 {
+    font-family: "Permanent Marker", arial;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 9px 10px rgba(107, 69, 79, 0.99);
+    text-align: center;
+}
+
+ul, button {
+    font-family: 'prompt', sans-serif;
+    font-weight: bold;
+
+}
+
+.home, .how-to-play{
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/img/flower.jpg');
+}
+
+.how-to-play {
+    margin: 17px;
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100px;
+    margin: 10px;
+    margin-left: 45%;
+    background-color: white;
+}
