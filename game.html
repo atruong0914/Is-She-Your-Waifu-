@@ -5,13 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-    <link rel = "stylesheet" type="text/css" href="css/game.css"/>
+    <link rel = "stylesheet" type="text/css" href="css/waifu.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Prompt:wght@200&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="js/app.js"></script>
 </head>
 <body>
+    <section>
+        <img id="rem" src="/img/rem-game.png"/>
+    <div id='speech-bubble'>
+        <p>I'm thinking of a word... Enter the letter of your choice to complete it!</p>
+        <img id="bubble" src="/img/bubble.png"/>
+    </div>
+    <div id='textbox'>
+        <input type = "text" id = "input-guess" placeholder = "Enter your guess here" maxlength="1">
+        <button id = "enter">Enter Guess</button>
+        <div id = "guess"></div>
+        <p id = "guess-correct"></p>
+        <p id = "guess-wrong"></p>
+        <p id = "guess-amount"></p>
+        <img src="/img/textbox.png"/>
+    </div>
+    </section>
 
+    <section class = "loser">
+        <h1 class = "title">You died.</h1>
+    </section>
+
+    <section class = "winner">
+        <h1 class = "title">You won her heart!</h1>
+    </section>
 
 </body>
 </html>

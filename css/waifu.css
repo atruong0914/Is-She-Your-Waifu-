@@ -1,0 +1,22 @@
+#btn-cont, #btn-home {
+    display: none;
+}
+
+.loser, .winner {
+    display: none;
+} 
+
+.title {
+    font-size: 100px;
+    font-family: 'Impact', arial, sans-serif;
+    position: absolute;  
+    top: 10px;
+    color: red;
+}
+
+body {
+    background-image: url(/img/bg.png);
+    
+
+}
+
