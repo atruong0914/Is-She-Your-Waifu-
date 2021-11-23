@@ -15,6 +15,7 @@ $('#btn-play').click(function(){
 // --good btn - click - change image & text - toggle yes btn - hide good & bad btn
 $('#btn-good').click(function(){
     $('#rem').attr('src','/img/rem-good.png');
+    $('#rem').effect('bounce', { times: 1}, 500);
     $('p').text('I love that response! Lets play a game!');
     $('#btn-cont').toggle();
     $('#btn-bad').hide();
@@ -29,7 +30,7 @@ $('#btn-cont').click(function(){
 // --bad btn - click - rem shake - toggle home btn - hide good & bad btns
 $('#btn-bad').click(function(){
     $('#rem').attr('src','/img/rem-anger.png');
-    // $('#rem').effect('shake', {times: 20}, 700);
+    $('#rem').effect('shake', {times: 20}, 700);
     $('p').text('W-What?! You\'re dead now!');
     $('#btn-home').toggle(1000);
     $('#btn-bad').hide();
@@ -40,7 +41,7 @@ $('#btn-bad').click(function(){
 
 // --go back to home
 $('#btn-home').click(function(){
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 
@@ -72,12 +73,14 @@ $('#btn-enter').click(function(){
     if (wordSelected === winWord){
         $('.winner-word').fadeIn(1000);
         $('#rem').attr('src','/img/rem-word.png');
+        $('#rem').effect('bounce', { times: 1}, 500);
         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
         $('#input-guess').toggle(1000);
         $('#btn-enter').toggle(1000);
         // --continue
         $('#btn-what').click(function(){
             $('#rem').attr('src', '/img/rem-quiz.png');
+            $('#rem').effect('bounce', { times: 1}, 500);
             $('#text').text('Since we\'ve gotten this far... What is my favorite color?');
             // -- toggle btns
             $('#btn-play-again').toggle(1000);
@@ -92,12 +95,27 @@ $('#btn-enter').click(function(){
                  $('#text').text('W-What?! You\'re dead now!');
                  $('.loser').fadeIn(1000);
                  $('body').css('background-image', 'url(/img/bg-lose.jpg)');
+                 // --toggle off buttons and display new
+                 $('#btn-idk').toggle(1000);
+                 $('#btn-pink').toggle(1000);
+                 $('#btn-purple').toggle(1000);
+                 $('#btn-home').click(function(){
+                     window.location.href = 'index.html';
+                 });
                 });
 
             $('#btn-idk').click(function(){
                 $('#rem').attr('src','/img/rem-idk.png');
+                $('#rem').effect('bounce', { times: 1}, 500);
                 $('#text').text('Well, I love honest people... You make me so happy. You have my heart!');
                 $('body').css('background-image', 'url(/img/bg-win.jpg)');
+                // --toggle off other buttons and display new
+                $('#btn-idk').toggle(1000);
+                $('#btn-pink').toggle(1000);
+                $('#btn-purple').toggle(1000);
+                $('#btn-home').click(function(){
+                    window.location.href = 'index.html';
+                });
                 });
 
             $('#btn-pink').click(function(){
@@ -105,6 +123,14 @@ $('#btn-enter').click(function(){
                 $('#text').text('Why do you think you know everything about me?!');
                 $('.loser').fadeIn(1000);
                 $('body').css('background-image', 'url(/img/bg-lose.jpg)');
+                $('#rem').effect('shake', {times: 20}, 700);
+                // --toggle off other buttons and display new
+                $('#btn-idk').toggle(1000);
+                $('#btn-pink').toggle(1000);
+                $('#btn-purple').toggle(1000);
+                $('#btn-home').click(function(){
+                    window.location.href = 'index.html';
+                });
                 });
         });
         // --play again
@@ -180,7 +206,7 @@ function gameOver(){
         $('#input-guess').toggle(1000);
         $('#btn-enter').toggle(1000);
         $('#btn-home').click(function(){
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
         });
         $('body').css('background-image', 'url(/img/bg-lose.jpg)');
     }
