@@ -85,6 +85,27 @@ $('#btn-enter').click(function(){
             // --new btns answer question
             $('.winner-word').append('<button id="btn-purple">Purple</button>',
              '<button id="btn-pink">Pink</button>', '<button id="btn-idk">I have no idea.</button>');
+             // --outcomes based on player choice
+             $('#btn-purple').click(function(){
+                 $('#rem').attr('src','/img/rem-anger.png');
+                 $('#rem').effect('shake', {times: 20}, 700);
+                 $('#text').text('W-What?! You\'re dead now!');
+                 $('.loser').fadeIn(1000);
+                 $('body').css('background-image', 'url(/img/bg-lose.jpg)');
+                });
+
+            $('#btn-idk').click(function(){
+                $('#rem').attr('src','/img/rem-idk.png');
+                $('#text').text('Well, I love honest people... You make me so happy. You have my heart!');
+                $('body').css('background-image', 'url(/img/bg-win.jpg)');
+                });
+
+            $('#btn-pink').click(function(){
+                $('#rem').attr('src', '/img/rem-pink.png');
+                $('#text').text('Why do you think you know everything about me?!');
+                $('.loser').fadeIn(1000);
+                $('body').css('background-image', 'url(/img/bg-lose.jpg)');
+                });
         });
         // --play again
         $('#btn-play-again').click(function(){
