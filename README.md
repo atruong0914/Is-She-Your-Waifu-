@@ -11,7 +11,7 @@
 * CSS
 * JavaScript
 * jQuery
-* [Surge](fresh-waifu-annika.surge.sh)
+* [Surge](https://fresh-waifu-annika.surge.sh/)
 * [Trello](https://trello.com/invite/b/XGtwx60e/c667a15fad1e8aa76c437e7d084fbc29/is-she-your-waifu)
 ***
 # ***Getting Started***
