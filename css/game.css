@@ -32,13 +32,12 @@ body {
 
 #rem {
     display: flex;
+    flex-direction: column;
     height: auto;
-    width: 490px;
+    width: 550px;
     position: absolute;
     right: 70%;
 }
-
-#rem-
 
 p {
     font-size: 30px;
@@ -85,7 +84,7 @@ p {
     font-family: 'prompt', sans-serif;
 }
 
-#btn-enter {
+#btn-enter, #btn- {
     position: absolute;
     top: 460px;
     left: 600px;
