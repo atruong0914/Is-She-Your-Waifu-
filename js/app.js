@@ -155,8 +155,10 @@ const guessLetter = (letter)=>{
         if (guessedLetters[i] === letter){
             // --then do this
         $('#rem').attr('src', '/img/rem-no.png');
+        $('#rem').effect('bounce', { times: 1}, 500);
         $('#guess-letters').html((guessedLetters) + " ");
         $('#text').text('You already guessed that letter!');
+        $('#input-guess').effect('shake', {times: 3}, 400);
         // --end and return value
         return
         }
@@ -171,6 +173,7 @@ const guessLetter = (letter)=>{
         if (wordSelected[k] === letter){
             // --in word array replace _ w/ a letter at word[k]
            word[k] = letter;
+           $('#guess-word').effect('bounce', {times: 1}, 600);
            // --set flag to one so at least one match can occur/loop is iterating over each letter
            flag = 1;
         // --if they didn't type the correct letter
