@@ -40,7 +40,7 @@ body {
 }
 
 p {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Prompt', sans-serif;
     color: black;
     text-align: center;
@@ -84,7 +84,7 @@ p {
     font-family: 'prompt', sans-serif;
 }
 
-#btn-enter, #btn- {
+#btn-enter{
     position: absolute;
     top: 460px;
     left: 600px;
@@ -94,30 +94,75 @@ p {
     border: transparent;
     font-size: 25px;
     font-family: 'prompt', sans-serif;
-    
 }
 
-#btn-what:hover, #btn-enter:hover, #btn-home:hover {
+#btn-play-again, #btn-idk{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    left: 75vw;
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+}
+
+#btn-what{
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    left: 60vw;
+}
+#btn-pink {
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    left: 65vw;
+}
+#btn-purple{
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    left: 53vw;
+}
+
+#btn-home{
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    left: 65vw;
+}
+
+
+#btn-what:hover, #btn-play-again:hover, #btn-enter:hover, #btn-home:hover, #btn-pink:hover, #btn-purple:hover, #btn-idk:hover {
     cursor: pointer;
     color:tomato;
 }
 
-#btn-what, #btn-home {
-    position: absolute;
-    top: 200px;
-    left: 400px;
-    width: 120px;
-    height: 50px;
-    background-color: transparent;
-    border: transparent;
-    font-size: 30px;
-    font-family: 'prompt', sans-serif;
-}
-
 #guess-word{
-    border: 2px solid black;
     top: 120px;
-    left: 330px;
+    left: 400px;
 }
 
 #guess-letters {

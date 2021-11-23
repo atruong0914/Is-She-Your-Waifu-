@@ -101,7 +101,7 @@ $('#btn-enter').click(function(){
                  $('#btn-purple').toggle(1000);
                  $('#btn-home').click(function(){
                      window.location.href = 'index.html';
-                 });
+                });
                 });
 
             $('#btn-idk').click(function(){
