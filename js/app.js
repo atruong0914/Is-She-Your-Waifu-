@@ -75,7 +75,9 @@ $('#btn-enter').click(function(){
         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
         $('#input-guess').toggle(1000);
         $('#btn-enter').toggle(1000);
-        
+        $('#btn-play-again').click(function(){
+            window.location.href = "";
+        });
     };
 });
 
