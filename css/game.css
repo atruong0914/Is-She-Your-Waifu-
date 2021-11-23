@@ -142,7 +142,7 @@ p {
     left: 53vw;
 }
 
-#btn-home{
+#btn-home, #btn-home-win{
     background-color: transparent;
     border: transparent;
     font-size: 25px;
@@ -154,8 +154,12 @@ p {
     left: 65vw;
 }
 
+#btn-home-win {
+    display: none;
+}
 
-#btn-what:hover, #btn-play-again:hover, #btn-enter:hover, #btn-home:hover, #btn-pink:hover, #btn-purple:hover, #btn-idk:hover {
+
+#btn-what:hover, #btn-play-again:hover, #btn-enter:hover, #btn-home:hover, #btn-pink:hover, #btn-purple:hover, #btn-idk:hover, #btn-home-win:hover{
     cursor: pointer;
     color:tomato;
 }

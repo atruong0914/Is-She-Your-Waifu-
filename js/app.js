@@ -110,12 +110,13 @@ $('#btn-enter').click(function(){
                 $('#text').text('Well, I love honest people... You make me so happy. You have my heart!');
                 $('body').css('background-image', 'url(/img/bg-win.jpg)');
                 // --toggle off other buttons and display new
+                $('#btn-home-win').toggle(1000);
+                $('#btn-home-win').click(function(){
+                    window.location.href = 'index.html';
+                });
                 $('#btn-idk').toggle(1000);
                 $('#btn-pink').toggle(1000);
                 $('#btn-purple').toggle(1000);
-                $('#btn-home').click(function(){
-                    window.location.href = 'index.html';
-                });
                 });
 
             $('#btn-pink').click(function(){
@@ -190,6 +191,7 @@ const guessLetter = (letter)=>{
     // --otherwise, display these for incorrect
     else {
         $('#rem').attr('src', '/img/rem-guess.png');
+        $('#rem').effect('bounce', { times: 1}, 500);
         $('#text').text('You are... A bit dumb I\'d say..?');
     // minus guess amount 
         totalGuesses -=1
