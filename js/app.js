@@ -16,7 +16,7 @@ $('#btn-play').click(function(){
 $('#btn-good').click(function(){
     $('#rem').attr('src','/img/rem-good.png');
     $('#rem').effect('bounce', { times: 1}, 500);
-    $('p').text('I love that response! Lets play a game!');
+    $('#text').text('I love that response! Lets play a game!');
     $('#btn-cont').toggle();
     $('#btn-bad').hide();
     $('#btn-good').hide();
@@ -30,9 +30,9 @@ $('#btn-cont').click(function(){
 // --bad btn - click - rem shake - toggle home btn - hide good & bad btns
 $('#btn-bad').click(function(){
     $('#rem').attr('src','/img/rem-anger.png');
-    $('#rem').effect('shake', {times: 20}, 700);
+    $('#rem').effect('shake', {times: 20}, 900);
     $('p').text('W-What?! You\'re dead now!');
-    $('#btn-home').toggle(1000);
+    $('#btn-home').toggle(400);
     $('#btn-bad').hide();
     $('#btn-good').hide();
     $('.loser').fadeIn(1000);
