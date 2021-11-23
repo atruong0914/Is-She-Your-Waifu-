@@ -10,16 +10,25 @@
 * HTML
 * CSS
 * JavaScript
+* jQuery
+* [Surge](fresh-waifu-annika.surge.sh)
 * [Trello](https://trello.com/invite/b/XGtwx60e/c667a15fad1e8aa76c437e7d084fbc29/is-she-your-waifu)
 ***
 # ***Getting Started***
 ## Answer questions given to you wisely by the waifu!
 ***
 # Screenshots
-* n/a
+* ![Home](https://user-images.githubusercontent.com/90117976/143085706-fe02676b-b424-4af4-a4b0-f10d979a5610.png)
+* ![Game](https://user-images.githubusercontent.com/90117976/143085769-83f9e5cd-e964-41fa-afed-2698dc443df2.png)
+
 ***
 # Future Updates
-* n/a
+- [ ] More outcomes/reactions from waifu. Different destinations.
+- [ ] Clean up code.
+- [ ] Add different waifu's to choose from.
+- [ ] Fix styling, possibly add more as well.
 ***
 # ***Credits***
-* n/a
+* [w3schools](https://www.w3schools.com/)
+* [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* Much thanks to TA!
