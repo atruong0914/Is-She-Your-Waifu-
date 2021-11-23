@@ -66,6 +66,14 @@ $('#btn-enter').click(function(){
     guessLetter(letter);
     // --display
     $('#guess-word').html(word);
+    // --make the winning word - word array to string
+    let winWord = word.join("");
+    // --if it equals eachother
+    if (wordSelected === winWord){
+        $('.winner-word').fadeIn(1000);
+        $('#rem').attr('src','/img/rem-word.png');
+        $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
+    };
 });
 
 // --iterate over array for length of word selected
@@ -99,7 +107,6 @@ const guessLetter = (letter)=>{
         if (wordSelected[k] === letter){
             // --in word array replace _ w/ a letter at word[k]
            word[k] = letter;
-           
            // --set flag to one so at least one match can occur/loop is iterating over each letter
            flag = 1;
         // --if they didn't type the correct letter
@@ -107,6 +114,7 @@ const guessLetter = (letter)=>{
            $('#guess-letters').html((guessedLetters) + " ");
         };
     };
+    
     // --if condition is true, display
     if (flag === 1){
         $('#rem').attr('src', '/img/rem-nice.png');
@@ -120,13 +128,13 @@ const guessLetter = (letter)=>{
         totalGuesses -=1
         $('#guess-amount').text(totalGuesses);
     };
-    // gameWin();
     gameOver();
+    
 };
 
-// end the game
+// --end the game
 function gameOver(){
-    if (totalGuesses === 0 || word.length === wordSelected){
+    if (totalGuesses === 0){
         $('.loser').fadeIn(1000);
         $('#rem').attr('src','/img/rem-anger.png');
         // $('#rem').effect('shake', {times: 20}, 700);
@@ -137,17 +145,10 @@ function gameOver(){
             window.location.href = 'home.html';
         });
         $('body').css('background-image', 'url(/img/bg-lose.jpg)');
-    };
+    }
+    
 };
 
-// function gameWin(){
-//     // --win
-//     if (){
-//         $('.winner-word').fadeIn(1000);
-//         $('#rem').attr('src','/img/rem-word.png');
-//         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
-//         console.log("working")
-//     };
-// }
+
 
 
