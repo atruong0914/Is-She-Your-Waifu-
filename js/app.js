@@ -75,6 +75,13 @@ $('#btn-enter').click(function(){
         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
         $('#input-guess').toggle(1000);
         $('#btn-enter').toggle(1000);
+        // --continue
+        $('#btn-what').click(function(){
+            $('#rem').attr('src', '/img/rem-quiz.png');
+            $('#text').text('Since we\'ve gotten this far... What is my favorite color?');
+            
+        });
+        // --play again
         $('#btn-play-again').click(function(){
             window.location.href = "";
         });
