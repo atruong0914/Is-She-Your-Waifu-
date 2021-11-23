@@ -82,7 +82,9 @@ $('#btn-enter').click(function(){
             // -- toggle btns
             $('#btn-play-again').toggle(1000);
             $('#btn-what').toggle(1000);
-
+            // --new btns answer question
+            $('.winner-word').append('<button id="btn-purple">Purple</button>',
+             '<button id="btn-pink">Pink</button>', '<button id="btn-idk">I have no idea.</button>');
         });
         // --play again
         $('#btn-play-again').click(function(){
