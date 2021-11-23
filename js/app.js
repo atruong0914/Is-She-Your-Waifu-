@@ -79,7 +79,10 @@ $('#btn-enter').click(function(){
         $('#btn-what').click(function(){
             $('#rem').attr('src', '/img/rem-quiz.png');
             $('#text').text('Since we\'ve gotten this far... What is my favorite color?');
-            
+            // -- toggle btns
+            $('#btn-play-again').toggle(1000);
+            $('#btn-what').toggle(1000);
+
         });
         // --play again
         $('#btn-play-again').click(function(){
