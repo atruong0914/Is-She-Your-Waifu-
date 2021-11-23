@@ -2,7 +2,7 @@
 // **jquery**
 // --how to play btn - select id - click - toggle display
 $('#btn-rules').click(function(){
-    $('.how-to-play').toggle();
+    $('.how-to-play').toggle(600);
 });
 // --play btn - select id - click - go to waifu.html
 $('#btn-play').click(function(){

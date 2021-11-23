@@ -49,3 +49,7 @@ button {
     background-color: white;
 }
 
+button:hover {
+    cursor: pointer;
+    color: tomato;
+}

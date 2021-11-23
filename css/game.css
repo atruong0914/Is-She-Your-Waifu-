@@ -5,16 +5,140 @@
     display: none;
 } 
 
+body {
+    background-image: url(/img/bg.png);
+    
+
+}
+
+#btn-cont, #btn-home {
+    display: none;
+}
+
 .title {
     font-size: 100px;
     font-family: 'Impact', arial, sans-serif;
     position: absolute;  
-    top: 10px;
+    top: 700px;
+    left: 150px;
     color: red;
 }
 
 body {
     background-image: url(/img/bg.png);
-    
+    background: cover;
 
+}
+
+#rem {
+    display: flex;
+    height: auto;
+    width: 490px;
+    position: absolute;
+    right: 70%;
+}
+
+#rem-
+
+p {
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    display: flex;
+}
+
+#speech-bubble {
+    position: absolute;
+    bottom:450px;
+    right: 100px;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#textbox {
+    position: absolute;
+    bottom:100px;
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    left: 850px;
+    bottom: 350px;
+}
+
+#input-guess {
+    position: absolute;
+    top: 480px;
+    left: 190px;
+    width: 320px;
+    height: 50px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 30px;
+    font-family: 'prompt', sans-serif;
+}
+
+#btn-enter {
+    position: absolute;
+    top: 460px;
+    left: 600px;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 25px;
+    font-family: 'prompt', sans-serif;
+    
+}
+
+#btn-what:hover, #btn-enter:hover, #btn-home:hover {
+    cursor: pointer;
+    color:tomato;
+}
+
+#btn-what, #btn-home {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 30px;
+    font-family: 'prompt', sans-serif;
+}
+
+#guess-word{
+    border: 2px solid black;
+    top: 120px;
+    left: 330px;
+}
+
+#guess-letters {
+    top: 220px;
+    left: 60px;
+    font-size: 25px;
+    color: blue;
+}
+
+h1 {
+    font-family: 'prompt', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 200px;
+    left: 70px;
+}
+
+#guess-amount {
+    top: 280px;
+    left: 120px;
+    font-size: 25px;
+    color: blue;
 }
