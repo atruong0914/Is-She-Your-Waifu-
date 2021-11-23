@@ -73,6 +73,9 @@ $('#btn-enter').click(function(){
         $('.winner-word').fadeIn(1000);
         $('#rem').attr('src','/img/rem-word.png');
         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
+        $('#input-guess').toggle(1000);
+        $('#btn-enter').toggle(1000);
+        
     };
 });
 
