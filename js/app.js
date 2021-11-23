@@ -29,7 +29,7 @@ $('#btn-cont').click(function(){
 // --bad btn - click - rem shake - toggle home btn - hide good & bad btns
 $('#btn-bad').click(function(){
     $('#rem').attr('src','/img/rem-anger.png');
-    $('#rem').effect('shake', {times: 20}, 700);
+    // $('#rem').effect('shake', {times: 20}, 700);
     $('p').text('W-What?! You\'re dead now!');
     $('#btn-home').toggle(1000);
     $('#btn-bad').hide();
@@ -45,22 +45,109 @@ $('#btn-home').click(function(){
 
 
 // game page
-// **jquery**
-
-
 // **variables**
-// --lets make the words - array - grab
+// --holds the underscores
+let word = [];
+// --the letters guessed
+let guessedLetters = [];
+// --guesses
+let totalGuesses = 5;
+$('#guess-amount').text(totalGuesses);
+// --lets make the words - array 
 const wordRandom = ["rem", "ram", "rezero", "anime", "waifu"];
-// -- the word, lines, and guess
-let word = "";
-let wordLines = [];
-let wordGuess = "";
 
-// --select the words randomly
+// --select the word randomly - multiply word length by a random #, round to lowest integer
 let wordSelected = wordRandom[Math.floor(Math.random()*wordRandom.length)];
-// is it selecting the words?
-console.log(wordSelected);
 
-// **functions**
-// -- start the game and implement the lines based on length of word
+// --click, get input
+$('#btn-enter').click(function(){
+    let letter = $('#input-guess').val();
+    // run this to do stuff with input
+    guessLetter(letter);
+    // --display
+    $('#guess-word').html(word);
+});
+
+// --iterate over array for length of word selected
+for (let i = 0; i < wordSelected.length; i++){
+    // --get underscores for the word length, filling array
+    word.push("_ "); 
+    // --display
+    $('#guess-word').html(word);
+};
+// --function for what happens when you guess letters, this is so i can do something with letter
+const guessLetter = (letter)=>{
+    // --iterate over array the length of guessed letters
+    for (let i = 0; i < guessedLetters.length; i++){
+        // --if they guess same letter 
+        if (guessedLetters[i] === letter){
+            // --then do this
+        $('#rem').attr('src', '/img/rem-no.png');
+        $('#guess-letters').html((guessedLetters) + " ");
+        $('#text').text('You already guessed that letter!');
+        // --end and return value
+        return
+        }
+    }
+    // --push to guessed letters array, add element to end of array and return new one
+    guessedLetters.push(letter);
+    // --set a flag to 0; no match. otherwise my code registers incorrect and correct. output once
+    flag = 0;
+    // --go over each letter in random word and compare to letter guessed
+    for (let k = 0; k < wordSelected.length; k++){
+        // --they typed correct letter
+        if (wordSelected[k] === letter){
+            // --in word array replace _ w/ a letter at word[k]
+           word[k] = letter;
+           
+           // --set flag to one so at least one match can occur/loop is iterating over each letter
+           flag = 1;
+        // --if they didn't type the correct letter
+        }else {
+           $('#guess-letters').html((guessedLetters) + " ");
+        };
+    };
+    // --if condition is true, display
+    if (flag === 1){
+        $('#rem').attr('src', '/img/rem-nice.png');
+        $('#text').text('I guess you\'re kinda good at this...');
+    } 
+    // --otherwise, display these for incorrect
+    else {
+        $('#rem').attr('src', '/img/rem-guess.png');
+        $('#text').text('You are... A bit dumb I\'d say..?');
+    // minus guess amount 
+        totalGuesses -=1
+        $('#guess-amount').text(totalGuesses);
+    };
+    // gameWin();
+    gameOver();
+};
+
+// end the game
+function gameOver(){
+    if (totalGuesses === 0 || word.length === wordSelected){
+        $('.loser').fadeIn(1000);
+        $('#rem').attr('src','/img/rem-anger.png');
+        // $('#rem').effect('shake', {times: 20}, 700);
+        $('#text').text('W-What?! You\'re dead now!');
+        $('#input-guess').toggle(1000);
+        $('#btn-enter').toggle(1000);
+        $('#btn-home').click(function(){
+            window.location.href = 'home.html';
+        });
+        $('body').css('background-image', 'url(/img/bg-lose.jpg)');
+    };
+};
+
+// function gameWin(){
+//     // --win
+//     if (){
+//         $('.winner-word').fadeIn(1000);
+//         $('#rem').attr('src','/img/rem-word.png');
+//         $('#text').text('W-Wow! I\'m impressed... I have one last question for you.');
+//         console.log("working")
+//     };
+// }
+
 
